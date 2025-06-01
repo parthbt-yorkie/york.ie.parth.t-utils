@@ -1,0 +1,41 @@
+{
+  "name": "@york.ie.parth.t/utils",
+  "version": "1.0.0",
+  "description": "Comprehensive utilities with full TypeScript support",
+  "author": "Parth B Thakkar",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "type": "commonjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist --clean",
+    "prepare": "npm run build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parthbt-yorkie/york.ie.parth.t-utils.git"
+  },
+  "keywords": [
+    "string",
+    "case",
+    "conversion",
+    "typescript",
+    "utils"
+  ],
+  "bugs": {
+    "url": "https://github.com/parthbt-yorkie/york.ie.parth.t-utils/issues"
+  },
+  "homepage": "https://github.com/parthbt-yorkie/york.ie.parth.t-utils#readme",
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "jest": "^29.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  }
+}
