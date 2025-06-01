@@ -1,24 +1,25 @@
 {
   "name": "@york.ie.parth.t/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Comprehensive utilities with full TypeScript support",
   "author": "Parth B Thakkar",
   "license": "MIT",
-  "main": "dist/index.js",
+  "type": "module",
+  "main": "dist/index.cjs",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
+      "require": "./dist/index.cjs.js"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist --clean",
+    "build": "tsup src/index.ts --dts --format cjs,esm --out-dir dist --clean && node scripts/postbuild.cjs",
     "prepare": "npm run build",
     "test": "jest"
   },
