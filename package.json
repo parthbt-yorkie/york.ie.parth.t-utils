@@ -1,13 +1,19 @@
 {
   "name": "@york.ie.parth.t/utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Comprehensive utilities with full TypeScript support",
   "author": "Parth B Thakkar",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "type": "commonjs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
   "files": [
     "dist"
   ],
