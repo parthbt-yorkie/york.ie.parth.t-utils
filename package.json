@@ -19,6 +19,7 @@
     "dist"
   ],
   "scripts": {
+    "dev": "tsup src/index.ts --dts --format esm,cjs --out-dir dist --watch && node scripts/postbuild.cjs",
     "build": "tsup src/index.ts --dts --format cjs,esm --out-dir dist --clean && node scripts/postbuild.cjs",
     "prepare": "npm run build",
     "test": "jest"
