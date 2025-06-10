@@ -4,7 +4,9 @@
  * Flat barrel file that exports all string case conversion functions individually,
  * so users can import directly from the package root.
  */
-
+// export const snakeToPascal = (input: string | null | undefined): string => {
+//   return input + "okokoo";
+// };
 export {
   camelToPascal,
   camelToSnake,

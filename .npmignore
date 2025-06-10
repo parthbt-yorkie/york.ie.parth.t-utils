@@ -1,0 +1,38 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Tests
+**/*.test.*
+**/*.spec.*
+__tests__/
+coverage/
+
+# Config files
+tsconfig.json
+vitest.config.ts
+.eslintrc.*
+.prettierrc.*
+.editorconfig
+
+# Development files
+.vscode/
+.idea/
+*.log
+.env*
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Build artifacts
+*.tsbuildinfo
+.cache/
+
+# Documentation (optional - remove if you want to include)
+docs/
+*.md
+!README.md

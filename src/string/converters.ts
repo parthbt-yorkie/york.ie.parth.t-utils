@@ -155,7 +155,7 @@ const createConverter =
   };
 
 // Helper type for all conversion names (camelToSnake etc)
-type ConverterName = `${CaseType}To${Capitalize<CaseType>}`;
+export type ConverterName = `${CaseType}To${Capitalize<CaseType>}`;
 
 // Dynamic generation of all converters:
 const converters = {} as Record<string, (input: NullableString) => string>;

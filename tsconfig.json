@@ -1,16 +1,57 @@
+/**
+ * TypeScript Configuration File
+ *
+ * Compiler Options:
+ * @target - ES2020 - Sets JavaScript language version for emitted code
+ * @lib - Specifies library files to include in the compilation
+ * @module - ESNext - Specify module code generation method
+ * @moduleResolution - node - Determine how modules get resolved
+ * @declaration - Generates corresponding .d.ts files
+ * @declarationMap - Generates sourcemap for .d.ts files
+ * @outDir - Output directory for compiled files
+ * @rootDir - Root directory of source files
+ * @strict - Enables all strict type checking options
+ * @esModuleInterop - Enables interoperability between CommonJS and ES Modules
+ * @skipLibCheck - Skip type checking of declaration files
+ * @forceConsistentCasingInFileNames - Ensures consistent casing in file names
+ * @resolveJsonModule - Allow importing .json files
+ * @allowSyntheticDefaultImports - Allow default imports from modules with no default export
+ * @noUnusedLocals - Report errors on unused locals
+ * @noUnusedParameters - Report errors on unused parameters
+ * @exactOptionalPropertyTypes - Enable strict checking of optional property assignments
+ * @noImplicitReturns - Report error when not all code paths in function return a value
+ * @noFallthroughCasesInSwitch - Report errors for fallthrough cases in switch statement
+ * @noUncheckedIndexedAccess - Add undefined to indexed access results
+ * @noImplicitOverride - Ensure overriding members are marked with override modifier
+ *
+ * Include/Exclude:
+ * - Includes all files in src directory
+ * - Excludes node_modules, dist directory, and test files
+ */
 {
   "compilerOptions": {
     "target": "ES2020",
+    "lib": ["ES2020"],
     "module": "ESNext",
-    "lib": ["ES2020", "DOM"],
-    "outDir": "dist",
+    "moduleResolution": "node",
     "declaration": true,
-    "declarationDir": "dist/types",
-    "moduleResolution": "Node",
+    "declarationMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitOverride": true
   },
-  "include": ["src"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }
