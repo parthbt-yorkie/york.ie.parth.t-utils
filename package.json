@@ -21,9 +21,7 @@
   "scripts": {
     "dev": "tsup src/index.ts --dts --format esm,cjs --out-dir dist --watch --clean",
     "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist --clean",
-    "prepare": "npm run build",
-    "test": "vitest",
-    "test:run": "vitest run"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -48,7 +46,6 @@
   },
   "devDependencies": {
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3",
-    "vitest": "^3.1.4"
+    "typescript": "^5.8.3"
   }
 }
